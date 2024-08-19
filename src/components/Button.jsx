@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({ label, iconURL, backgroundColor, textColor, borderColor }) => {
+const Button = ({ label, iconURL, backgroundColor, textColor, borderColor, fullWidth }) => {
     return (
         <button
             className={`flex justify-center items-center gap-2 px-7
@@ -9,7 +9,7 @@ const Button = ({ label, iconURL, backgroundColor, textColor, borderColor }) => 
                     ? `${backgroundColor} $
                 {textColor} ${borderColor}`
                     : "bg-coral-red text-white border-coral-red"
-                } rounded-full w-full"}`}
+                } rounded-full ${fullWidth && 'w-full'} "}`}
         >
 
 
